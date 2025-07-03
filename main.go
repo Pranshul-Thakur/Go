@@ -64,4 +64,65 @@ func main() {
 	// fmt.Printf("nums -> len: %d, cap: %d\n", len(nums), cap(nums))
 	// fmt.Printf("nums1 -> len: %d, cap: %d\n", len(nums1), cap(nums1))
 
+	// // MAPS
+
+	// // Explicit declaration
+	// var m map[int]int = make(map[int]int)
+
+	// // Short-hand
+	// m1 := make(map[int]int)
+
+	// // Adding values
+	// m[1] = 2
+	// m[2] = 3
+	// m[3] = 4
+
+	// m1[1] = 0
+	// m1[2] = 10
+	// m1[3] = 100
+
+	// // Printing all the values
+	// for i, j := range m {
+	// 	fmt.Println("The key and their respective values are : ", i, j)
+	// }
+
+	// // Getting the length
+	// fmt.Println("Length : ", len(m))
+
+	// // Accessing values
+	// fmt.Println("value of key 1 : ", m[1])
+
+	// // Deleting values
+	// delete(m, m[2])
+
+	// // Reprinting all the values
+	// for i, j := range m {
+	// 	fmt.Println("The new values and their pairs are : ", i, j)
+	// }
+
+	// // New size
+	// fmt.Println("New size is : ", len(m))
+
+	// LOOPS
+
+	A := 10
+
+	for i := range A {
+		println(i)
+	}
+
+	for i := 0; i < A; i++ {
+		println(A)
+	}
+
+	// For Maps
+	c := make(map[string]int)
+
+	c["B"] = 2
+	c["C"] = 3
+	c["D"] = 4
+
+	for i, j := range c {
+		println("The key and value pairs are : ", i, j)
+	}
 }
