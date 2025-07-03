@@ -8,6 +8,38 @@ package main
 // 	return a
 // }
 
+// // INHERITANCE IN STRUCT
+
+// type display struct {
+// 	b string
+// }
+
+// func (d display) print() {
+// 	fmt.Println("b : ", d.b)
+// }
+
+// type inherited struct {
+// 	display
+// 	a int
+// }
+
+// // INTERFACE INHERITANCE
+// type touch interface {
+// 	yellow()
+// }
+
+// type touchyou interface{
+// 	touch
+// 	red()
+// }
+
+// POINTERS WITH STRUCT
+type person struct{ age int }
+
+func update(x *int) {
+	*x = 100
+}
+
 func main() {
 	// // VARIABLE DECLARATION
 
@@ -103,26 +135,62 @@ func main() {
 	// // New size
 	// fmt.Println("New size is : ", len(m))
 
-	// LOOPS
+	// 	// LOOPS
 
-	A := 10
+	// 	A := 10
 
-	for i := range A {
-		println(i)
-	}
+	// 	for i := range A {
+	// 		println(i)
+	// 	}
 
-	for i := 0; i < A; i++ {
-		println(A)
-	}
+	// 	for i := 0; i < A; i++ {
+	// 		println(A)
+	// 	}
 
-	// For Maps
-	c := make(map[string]int)
+	// 	// For Maps
+	// 	c := make(map[string]int)
 
-	c["B"] = 2
-	c["C"] = 3
-	c["D"] = 4
+	// 	c["B"] = 2
+	// 	c["C"] = 3
+	// 	c["D"] = 4
 
-	for i, j := range c {
-		println("The key and value pairs are : ", i, j)
-	}
+	// 	for i, j := range c {
+	// 		println("The key and value pairs are : ", i, j)
+	// 	}
+
+	// // STRINGS
+
+	// // Concatenate
+	// a := "hi"
+	// b := "my name is"
+	// c := "wazowski"
+
+	// fmt.Println(a + " " + b + " " + c)
+
+	// STRUCT
+
+	// // Method calling
+	// d1 := display{a: 65, b: "A"}
+	// println("a : ", d1.a, "b : ", d1.b)
+
+	// d := inherited{display: display{b: "1"}, a: 5}
+	// println(d.a, d.b)
+
+	// // POINTERS
+
+	// var p *int
+
+	// a := 4
+	// p = &a
+
+	// fmt.Println(*p)
+
+	// *p = 10
+	// fmt.Println(*p)
+
+	p := &person{age: 18}
+	p.age = 21
+	update(&p.age)
+	lmt.println(p.age)
+
 }
